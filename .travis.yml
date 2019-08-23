@@ -1,0 +1,9 @@
+sudo: requied
+services:
+  - docker
+
+before_install:
+  - docker build -t itminhnhut/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run itminhnhut/docker-react
